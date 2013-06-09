@@ -1,7 +1,23 @@
+
 <h3>Enter a Stock Symbol Love Love</h3>
+<script type="text/javascript">
+    $(function() {
+        var name = $('#name');
+        var greeting = $('#greeting');
+
+        name.keyup(function() {
+            greeting.text('Hello ' + name.val()+ '!');
+        })
+    })
+
+</script>
+<input id="name" type="text">
+<h2 id="greeting"></h2>
+
 <form class="form-search pull-left">
     <input type="text" class="search-query input-xlarge" placeholder="Stock Symbol">
 </form>
+
 </br></br>
 <% @stocks.each do |stock| %>
   <p>Stock: <%=link_to stock.name, stock %></p>
