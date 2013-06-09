@@ -15,7 +15,7 @@
 <script>
     $(function() {
         $( "#tags" ).autocomplete({
-            source: '<%= stock_path(2) %>'
+            source: '<%= stock_path(@search) %>'
         });
     });
 </script>
