@@ -1,10 +1,21 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
+<<<<<<< HEAD
 body { padding-top: 250px;
   background-image: image-url('http://subtlepatterns.com/patterns/grey_wash_wall.png');
   background-repeat: repeat;}
 
 .hero-unit {display: block; padding-bottom: 20px; padding-top: 110px; padding-left: 130px;
+=======
+body {
+  padding-top: 250px;
+  background-image: image-url('http://subtlepatterns.com/patterns/grey_wash_wall.png');
+  background-repeat: repeat;
+}
+
+.hero-unit {
+  display: block; padding-bottom: 20px; padding-top: 110px; padding-left: 130px;
+>>>>>>> fdff87c39bb4ee8bbe18a7c34ac5eeb74375baba
   background: #4cc492; /* Old browsers */
   background: -moz-linear-gradient(top,  #4cc492 0%, #71eeb8 68%, #9ef7d8 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4cc492), color-stop(68%,#71eeb8), color-stop(100%,#9ef7d8)); /* Chrome,Safari4+ */
