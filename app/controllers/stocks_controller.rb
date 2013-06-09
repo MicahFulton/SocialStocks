@@ -2,7 +2,11 @@ class StocksController < ApplicationController
   # GET /stocks
   # GET /stocks.json
   def index
-    @stocks = Stock.all
+    if params[:term]
+      @stocks = Stock.where('name || symbol LIKE ?', "%#{params[:term]}%")
+    else
+      @stocks = Stock.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb

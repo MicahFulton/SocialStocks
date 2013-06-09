@@ -1,4 +1,9 @@
 <h3>Home Sarah Love Love</h3>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
 <script type="text/javascript">
     $(function() {
         var name = $('#name');
@@ -10,14 +15,44 @@
     })
 
 </script>
-<input id="name" type="text">
-<h2 id="greeting"></h2>
 
 <form class="form-search pull-left">
-    <input type="text" class="search-query" placeholder="Search">
+    <input id="tags" type="text" class="search-query" placeholder="Search">
 </form>
-
 </br></br>
+<h2 id="greeting"></h2>
 <% @stocks.each do |stock| %>
   <p>Stock: <%=link_to stock.name, stock %></p>
 <% end %>
+
+<script>
+    $(function() {
+        var availableTags = [
+            "ActionScript",
+            "AppleScript",
+            "Asp",
+            "BASIC",
+            "C",
+            "C++",
+            "Clojure",
+            "COBOL",
+            "ColdFusion",
+            "Erlang",
+            "Fortran",
+            "Groovy",
+            "Haskell",
+            "Java",
+            "JavaScript",
+            "Lisp",
+            "Perl",
+            "PHP",
+            "Python",
+            "Ruby",
+            "Scala",
+            "Scheme"
+        ];
+        $( "#tags" ).autocomplete({
+            source: '<%= stock_path(:name) %>'
+        });
+    });
+</script>
