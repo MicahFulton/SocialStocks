@@ -4,9 +4,6 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
 <form class="form-search pull-left">
-    <input type="text" class="search-query input-xlarge" placeholder="Stock Symbol">
-    <input id="tags" type="text" class="search-query" placeholder="Search">
-<form class="form-search pull-left">
     <input id="tags" type="text" class="search-query input-xlarge" placeholder="Stock Symbol">
 </form>
 </br></br>
@@ -18,7 +15,7 @@
 <script>
     $(function() {
         $( "#tags" ).autocomplete({
-            source: '<%= stock_path(:term) %>'
+            source: '<%= stock_path(2) %>'
         });
     });
 </script>
