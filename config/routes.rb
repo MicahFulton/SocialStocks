@@ -1,4 +1,7 @@
 SocialStocks::Application.routes.draw do
+  resources :stocks
+
+
   authenticated :user do
     root :to => 'home#index'
   end

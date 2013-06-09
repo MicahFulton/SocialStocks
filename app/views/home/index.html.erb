@@ -1,4 +1,8 @@
 <h3>Home Sarah Love Love</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
+<form class="navbar-search pull-left">
+    <input type="text" class="search-query" placeholder="Search">
+</form>
+</br></br>
+<% @stocks.each do |stock| %>
+  <p>Stock: <%=link_to stock.name, stock %></p>
 <% end %>
