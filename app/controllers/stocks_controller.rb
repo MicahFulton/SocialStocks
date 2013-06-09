@@ -3,7 +3,7 @@ class StocksController < ApplicationController
   # GET /stocks.json
   def index
     if params[:term]
-      @stocks = Stock.where('name || symbol LIKE ?', "%#{params[:term]}%")
+      @stocks = Stock.where('name OR symbol LIKE ?', "%#{params[:term]}%")
     else
       @stocks = Stock.all
     end
@@ -14,17 +14,29 @@ class StocksController < ApplicationController
     end
   end
 
-
-
   # GET /stocks/1
   # GET /stocks/1.json
   def show
+    if params[:term]
+      @stocks = Stock.where('name OR symbol LIKE ?', "%#{params[:term]}%")
+    else
     @stock = Stock.find(params[:id])
+    end
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @stock }
     end
+  end
+
+  def search
+    @search= Stock.where('name OR symbol LIKE ?', "%#{params[:term]}%")
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @stock }
+    end
+
   end
 
   # GET /stocks/new
