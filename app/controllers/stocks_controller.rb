@@ -14,6 +14,8 @@ class StocksController < ApplicationController
     end
   end
 
+
+
   # GET /stocks/1
   # GET /stocks/1.json
   def show
