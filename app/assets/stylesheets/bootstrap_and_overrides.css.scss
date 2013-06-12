@@ -11,7 +11,8 @@
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-image: url(http://cdn1.benzinga.com/files/images/story/2012/shutterstock_88412323.jpg);
+  background-image: url('shutterstockedited.jpg');
+    /*url(http://cdn1.benzinga.com/files/images/story/2012/shutterstock_88412323.jpg);*/
   background-repeat:repeat-x;
   background-color:black;
 }
@@ -21,4 +22,20 @@ h1 { font-size:55px;
   text-shadow: black 0.2em 0.4em 0.6em;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-family: 'Lobster';
+}
+
+#results{
+  background-color: black;
+  opacity: .8;
+  color: #ffffff;
+  margin-left: -70px;
+}
+
+#info{
+  background-color: #4F4F4F;
+}
+
+#less{
+  margin-left: -20px;
+  margin-top: -20px;
 }
